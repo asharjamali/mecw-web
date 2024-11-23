@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+                              <meta charset="UTF-8">
+                              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                              <title>Online Pay Fees MECW</title>
+                              <link rel="shortcut icon" href="/img/favicon.ico" type="image/svg+xml">
+                              <link rel="stylesheet" href="/css/payment.css">
+                              <link rel="stylesheet"
+                                                            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                              <script type="module"
+                                                            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+                              <section class="header">
+                                                            <nav>
+                                                                                          <a href="/index.html"><img
+                                                                                                                                                      id="logo-img"></a>
+
+                                                                                          <div class="nav-links"
+                                                                                                                        id="navLinks">
+
+                                                                                                                        <span class="icon"
+                                                                                                                                                      onclick="hidemenu()">&#10005;</span>
+                                                                                                                        <ul>
+                                                                                                                                                      <li><a href="/index.html">ℍ𝕆𝕄𝔼</a>
+                                                                                                                                                      </li>
+                                                                                                                                                      <li
+                                                                                                                                                                                    class="menu-has-children">
+                                                                                                                                                                                    <a
+                                                                                                                                                                                                                  href="/page/register.html">ℝ𝕖𝕘𝕚𝕤𝕥𝕖𝕣
+                                                                                                                                                                                    </a>
+                                                                                                                                                      </li>
+                                                                                                                                                      <li><a href="/page/Admission_page.html">𝔸𝕕𝕕𝕞𝕚𝕤𝕤𝕚𝕠𝕟
+                                                                                                                                                                                                                  ℂ𝕖𝕝𝕝</a>
+                                                                                                                                                      </li>
+                                                                                                                                                      <li><a href="/index.html#course_call">𝕊𝔼ℝ𝕍𝕀ℂ𝔼𝕊</a>
+                                                                                                                                                      </li>
+                                                                                                                                                      <li><a href="/page/fees_page.html">ℙℝ𝕀ℂ𝔼</a>
+                                                                                                                                                      </li>
+                                                                                                                                                      <li><a href="/page/Contact_page.html">ℂ𝕆ℕ𝕋𝔸ℂ𝕋</a>
+                                                                                                                                                      </li>
+                                                                                                                        </ul>
+                                                                                          </div>
+                                                                                          <span class="icon"
+                                                                                                                        onclick="showmenu()">&#9776;</span>
+                                                            </nav>
+
+                                                            <form onsubmit="pay()">
+                                                                                          <div class="wrapper">
+                                                                                                                        <div
+                                                                                                                                                      class="r_form_wrap">
+
+                                                                                                                                                      <div
+                                                                                                                                                                                    class="title">
+                                                                                                                                                                                    <p
+                                                                                                                                                                                                                  id="header_fees">
+                                                                                                                                                                                                                  Online
+                                                                                                                                                                                                                  Pay
+                                                                                                                                                                                                                  Fees
+                                                                                                                                                                                    </p>
+                                                                                                                                                      </div>
+
+                                                                                                                                                      <!-- Admission from -->
+
+                                                                                                                                                      <div
+                                                                                                                                                                                    class="r_form">
+                                                                                                                                                                                    <form method="post"
+                                                                                                                                                                                                                  onsubmit="sendmail(); reset(); return false;">
+                                                                                                                                                                                                                  <div
+                                                                                                                                                                                                                                                class="input_wrap">
+
+
+                                                                                                                                                                                                                                                <label
+                                                                                                                                                                                                                                                                              for="yourname">Course</label>
+                                                                                                                                                                                                                                                <div
+                                                                                                                                                                                                                                                                              class="input_item">
+
+                                                                                                                                                                                                                                                                              <i class="fa fa-bars" aria-hidden="true"
+                                                                                                                                                                                                                                                                                                            id="icon"></i>
+                                                                                                                                                                                                                                                                              <select id="course" name="cars"
+                                                                                                                                                                                                                                                                                                            class="input"
+                                                                                                                                                                                                                                                                                                            required>
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="select">
+                                                                                                                                                                                                                                                                                                                                          Select
+                                                                                                                                                                                                                                                                                                                                          the
+                                                                                                                                                                                                                                                                                                                                          Class
+                                                                                                                                                                                                                                                                                                            </option>
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="bca">
+                                                                                                                                                                                                                                                                                                                                          Class
+                                                                                                                                                                                                                                                                                                                                          NC
+                                                                                                                                                                                                                                                                                                                                          To
+                                                                                                                                                                                                                                                                                                                                          KG2
+                                                                                                                                                                                                                                                                                                            </option>
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="bscit">
+                                                                                                                                                                                                                                                                                                                                          Class
+                                                                                                                                                                                                                                                                                                                                          1
+                                                                                                                                                                                                                                                                                                                                          To
+                                                                                                                                                                                                                                                                                                                                          5th
+                                                                                                                                                                                                                                                                                                            </option>
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="bscca&it">
+                                                                                                                                                                                                                                                                                                                                          Class
+                                                                                                                                                                                                                                                                                                                                          5th
+                                                                                                                                                                                                                                                                                                                                          To
+                                                                                                                                                                                                                                                                                                                                          9th
+                                                                                                                                                                                                                                                                                                            </option>
+
+
+
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="bca">
+                                                                                                                                                                                                                                                                                                                                          Matriculation
+                                                                                                                                                                                                                                                                                                            </option>
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="bscit">
+                                                                                                                                                                                                                                                                                                                                          Intermediate
+                                                                                                                                                                                                                                                                                                            </option>
+                                                                                                                                                                                                                                                                                                            <option
+                                                                                                                                                                                                                                                                                                                                          value="bscca&it">
+                                                                                                                                                                                                                                                                                                                                          IT
+                                                                                                                                                                                                                                                                                                                                          Club
+                                                                                                                                                                                                                                                                                                            </option>
+                                                                                                                                                                                                                                                                              </select>
+                                                                                                                                                                                                                                                                              <br>
+                                                                                                                                                                                                                                                                              <br>
+
+                                                                                                                                                                                                                                                                              <label
+                                                                                                                                                                                                                                                                                                            for="yourname">Your
+                                                                                                                                                                                                                                                                                                            UID/Enrollment
+                                                                                                                                                                                                                                                                                                            no</label>
+                                                                                                                                                                                                                                                                              <div
+                                                                                                                                                                                                                                                                                                            class="input_item">
+                                                                                                                                                                                                                                                                                                            <!-- min="1" max="2" -->
+                                                                                                                                                                                                                                                                                                            <i class="fa fa-list-ol" aria-hidden="true"
+                                                                                                                                                                                                                                                                                                                                          id="icon"></i>
+                                                                                                                                                                                                                                                                                                            <input type="number" class="input"
+                                                                                                                                                                                                                                                                                                                                          id="uid"
+                                                                                                                                                                                                                                                                                                                                          placeholder="Enter the last two UID digit">
+                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                <p
+                                                                                                                                                                                                                                                                              id="uid_detail">
+                                                                                                                                                                                                                                                                              Ex:
+                                                                                                                                                                                                                                                                              FCAB2101101001
+                                                                                                                                                                                                                                                                              to
+                                                                                                                                                                                                                                                                              enter
+                                                                                                                                                                                                                                                                              the:
+                                                                                                                                                                                                                                                                              01
+                                                                                                                                                                                                                                                </p>
+                                                                                                                                                                                                                                                <input type="button" class="button"
+                                                                                                                                                                                                                                                                              value="Get"
+                                                                                                                                                                                                                                                                              onclick="getInputValue()">
+
+                                                                                                                                                                                                                                                <br>
+                                                                                                                                                                                                                                                <br>
+                                                                                                                                                                                                                                                <div
+                                                                                                                                                                                                                                                                              class="input_wrap">
+                                                                                                                                                                                                                                                                              <label
+                                                                                                                                                                                                                                                                                                            for="yourname">Student
+                                                                                                                                                                                                                                                                                                            name</label>
+                                                                                                                                                                                                                                                                              <div
+                                                                                                                                                                                                                                                                                                            class="input_item">
+                                                                                                                                                                                                                                                                                                            <i class="fa fa-user"
+                                                                                                                                                                                                                                                                                                                                          id="icon"></i>
+                                                                                                                                                                                                                                                                                                            <p id="demo"
+                                                                                                                                                                                                                                                                                                                                          class="input">
+                                                                                                                                                                                                                                                                                                            </p>
+                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                <div
+                                                                                                                                                                                                                                                                              class="input_wrap">
+                                                                                                                                                                                                                                                                              <label
+                                                                                                                                                                                                                                                                                                            for="yourname">Pending
+                                                                                                                                                                                                                                                                                                            Fees
+                                                                                                                                                                                                                                                                                                            Detail</label>
+                                                                                                                                                                                                                                                                              <div
+                                                                                                                                                                                                                                                                                                            class="input_item">
+                                                                                                                                                                                                                                                                                                            <i class="fa fa-credit-card"
+                                                                                                                                                                                                                                                                                                                                          id="icon"></i>
+                                                                                                                                                                                                                                                                                                            <p id="demo1"
+                                                                                                                                                                                                                                                                                                                                          class="input">
+                                                                                                                                                                                                                                                                                                            </p>
+                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                </div>
+
+
+                                                                                                                                                                                                                                                <input type="button" class="button"
+                                                                                                                                                                                                                                                                              value="Pay Fees"
+                                                                                                                                                                                                                                                                              onclick="sendmail()">
+
+                                                                                                                                                                                    </form>
+                                                                                                                                                      </div>
+                                                                                                                        </div>
+                                                                                          </div>
+                                                            </form>
+                              </section>
+
+                              <div class="none_div">
+                              </div>
+
+                              <div style="background-color: rgb(14, 188, 223);" class="container">
+                                                            <div style="text-align: center;" class="copyright">
+                                                                                          &copy; Copyright All Rights
+                                                                                          Reserved
+                                                                                          Template By <a
+                                                                                                                        href="https://www.facebook.com/ashhar.jamali.792?mibextid=ZbWKwL">Ashhar
+                                                                                                                        jamali🤓</a>
+                                                            </div>
+                              </div>
+
+</body>
+<script src="javascript/fees_script.js"></script>
+<script>
+                              var navLinks = document.getElementById("navLinks");
+
+                              function showmenu() {
+                                                            navLinks.style.right = "0";
+                              }
+                              function hidemenu() {
+                                                            navLinks.style.right = "-200px";
+                              }
+                              function sendmail() {
+                                                            Email.send({}).then(
+                                                                                          message => alert("Thanks you- Team GGU")
+                                                            );
+                              }
+</script>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+</html>
